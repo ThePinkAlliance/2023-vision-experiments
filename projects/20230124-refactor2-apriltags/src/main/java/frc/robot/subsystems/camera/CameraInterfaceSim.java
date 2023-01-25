@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * online on how to do that.
  */
 public class CameraInterfaceSim implements CameraInterface {
+    // Dashboard key definitions.
     private static final String CAM_CONNECTED_KEY = "SimCam connected";
     private static final String CAM_HAS_TARGET_KEY = "SimCam has target";
     private static final String CAM_ID_KEY = "SimCam target id";

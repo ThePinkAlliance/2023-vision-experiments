@@ -14,10 +14,20 @@ public class CameraSubsystem extends SubsystemBase {
     
     public CameraSubsystem() {
         if (!Robot.isReal()) camera = new CameraInterfaceSim();
-        else camera = new PhotonVisionCamera();
     }
 
+    /**
+     * Get closest target data.
+     * @return closest target data
+     */
     public CameraData getTarget() {
         return camera.getTarget();
+    }
+
+    /**
+     * Close the connection to the camera.
+     */
+    public void close() {
+        camera.close();
     }
 }
