@@ -1,7 +1,6 @@
 package frc.robot.subsystems.camera;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.subsystems.camera.CameraData.TargetData;
 
 /**
  * Allows for camera simulation via Network Tables (SmartDashboard) keys.
