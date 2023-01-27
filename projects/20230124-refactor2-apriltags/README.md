@@ -4,6 +4,10 @@ and can do simulation via the SmartDashboard.
 Setup:
 To change between Limelight and PhotonVision change line 12/13 in CameraSubsystem to create the proper camera.
 
+Camera setup:
+1. Set pipeline 0 to be for AprilTags
+1. Set pipeline 1 to be for Reflective targets
+
 Simulation:
 Use the SmartDashboard or Glass to set values in the SmartDashboard keys.
 
