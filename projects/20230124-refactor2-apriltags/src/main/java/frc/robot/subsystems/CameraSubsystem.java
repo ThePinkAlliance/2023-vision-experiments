@@ -7,6 +7,7 @@ import frc.robot.subsystems.camera.CameraInterface;
 import frc.robot.subsystems.camera.CameraInterfaceSim;
 import frc.robot.subsystems.camera.LimeLightCamera;
 import frc.robot.subsystems.camera.PhotonVisionCamera;
+import frc.robot.subsystems.camera.CameraInterface.PipelineType;
 
 public class CameraSubsystem extends SubsystemBase {
     private CameraInterface camera = new PhotonVisionCamera();
@@ -22,6 +23,15 @@ public class CameraSubsystem extends SubsystemBase {
      */
     public CameraData getTarget() {
         return camera.getTarget();
+    }
+
+    /**
+     * Set the pipeline type.
+     * @param type the pipeline type
+     */
+    public void setPipeline(PipelineType type)
+    {
+        camera.setPipeline(type);
     }
 
     /**
