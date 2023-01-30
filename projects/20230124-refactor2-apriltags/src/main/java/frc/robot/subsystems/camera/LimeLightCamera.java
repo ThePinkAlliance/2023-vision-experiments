@@ -88,7 +88,10 @@ public class LimeLightCamera implements CameraInterface {
     private void getAprilTagTargets(NetworkTable camera, CameraData camTargets) {
         //TODO: How do we get multiple targets?
         double[] camPose = camera.getEntry("campose").getDoubleArray(new double[0]);
+        double targetDistance = Math.abs(camPose[2]);
+        double zAngle = camPose[4];
+        double computedZAngle = zAngle; // Same as the reported angle.
         camTargets.addAprilTagTarget(0, camera.getEntry("tx").getDouble(0), 
-            camera.getEntry("ty").getDouble(0), Math.abs(camPose[2]));
+            camera.getEntry("ty").getDouble(0), computedZAngle, targetDistance);
     }
 }

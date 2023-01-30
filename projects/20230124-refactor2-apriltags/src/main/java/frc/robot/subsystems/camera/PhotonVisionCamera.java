@@ -116,7 +116,12 @@ public class PhotonVisionCamera implements CameraInterface {
 
         // Now add the targets
         for (PhotonTrackedTarget target : photonTargets) {
-            camTargets.addAprilTagTarget(target.getFiducialId(), target.getYaw(), target.getPitch(), target.getBestCameraToTarget().getX());
+            double zAngle = target.getBestCameraToTarget().getZ();
+            double computedZAngle = 0;
+            if (zAngle < 0) computedZAngle = -180 + computedZAngle;
+            else computedZAngle = 180 - computedZAngle;
+            camTargets.addAprilTagTarget(target.getFiducialId(), target.getYaw(), target.getPitch(), 
+                computedZAngle, target.getBestCameraToTarget().getX());
         }
     }
 
