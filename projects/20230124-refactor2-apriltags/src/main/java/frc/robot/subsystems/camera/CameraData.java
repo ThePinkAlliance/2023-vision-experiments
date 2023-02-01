@@ -38,6 +38,7 @@ public class CameraData {
          * counter closewise.
          */
         public double targetZAngle = 0;
+        
         /**
          * Distance to the target.
          */

@@ -48,7 +48,7 @@ public interface CameraInterface {
         SmartDashboard.putNumber("Cam Latency", data.latencyMillis);
         SmartDashboard.putNumber("Cam Num Targets", data.getTargets().size());
         SmartDashboard.putString("Cam Pipeline", data.pipelineType.toString());
-        if (!data.hasTargets()) {
+        if (data.hasTargets()) {
             SmartDashboard.putNumber("Cam Target ID", data.getTargets().get(0).id);
             SmartDashboard.putNumber("Cam Target Distance", data.getTargets().get(0).targetDistance);
             SmartDashboard.putNumber("Cam Target X Angle", data.getTargets().get(0).targetXAngle);

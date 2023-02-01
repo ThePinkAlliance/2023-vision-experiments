@@ -13,6 +13,7 @@ import frc.robot.commands.ServoByJoystickCommand;
 import frc.robot.subsystems.CameraSubsystem;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.ServoSubsystem;
+import frc.robot.subsystems.CameraSubsystem.CameraType;
 import edu.wpi.first.wpilibj2.command.Command;
 
 /**
@@ -29,7 +30,7 @@ public class RobotContainer {
   private static final Joystick joystick = new Joystick(0);
   private final DriveSubsystem driveSubsystem = new DriveSubsystem();
   private final ServoSubsystem servoSubsystem = new ServoSubsystem();
-  private final CameraSubsystem cameraSubsystem = new CameraSubsystem();
+  private final CameraSubsystem cameraSubsystem = new CameraSubsystem(CameraType.PHOTON_VISION);
 
   private final Command moveCommand = new MoveCommand(driveSubsystem, 
                                                           () -> joystick.getRawAxis(LEFT_JOY_AXIS), 

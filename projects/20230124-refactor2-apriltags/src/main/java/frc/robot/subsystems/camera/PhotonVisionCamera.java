@@ -15,7 +15,7 @@ import org.photonvision.targeting.PhotonTrackedTarget;
  */
 public class PhotonVisionCamera implements CameraInterface {
     private PhotonCamera camera;
-    private static String cameraName = "main";
+    private static String cameraName = "OV5647";
 
     public PhotonVisionCamera() {
         camera = new PhotonCamera(cameraName);
