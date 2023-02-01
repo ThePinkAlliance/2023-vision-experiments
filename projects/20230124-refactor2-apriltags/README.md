@@ -5,6 +5,7 @@ Setup:
 To change between Limelight and PhotonVision change line 12/13 in CameraSubsystem to create the proper camera.
 
 Camera setup:
+1. Limelight firmware version is 2023.2.0. PhotonVision firmware version is 2023.2.1.
 1. Set pipeline 0 to be for AprilTags
 1. Set pipeline 1 to be for Reflective targets
 
